@@ -1,0 +1,41 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#description {
+    color: darkblue;
+    display: inline;
+    font-style: italic;
+}
+
+p::first-letter {
+    font-size: 150%;
+}
+
+p > span {
+    font-weight: bolder;
+}
+
+table img {
+    width: 100px;
+}
+
+figcaption {
+    text-align: center;
+}
+
+table {
+    background-color: aliceblue;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: blue;
+}
