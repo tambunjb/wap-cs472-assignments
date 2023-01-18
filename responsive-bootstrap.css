@@ -1,0 +1,48 @@
+#container {
+    padding: 0 10px;
+}
+
+#header {
+    background-color: aqua;
+    text-align: center;
+}
+
+#nav {
+    background-color: green;
+    padding: 10px;
+}
+
+#nav > a {
+    text-decoration: none;
+    color: white;
+    border-right: 1px solid black;
+    padding: 10px;
+}
+
+#col1 {
+    background-color: azure;
+}
+
+#col2 {
+    background-color: beige;
+}
+
+#col3 {
+    background-color: bisque;
+}
+
+#footer {
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+
+#header, #footer {
+    padding: 15px 5px;
+}
+
+#col1, #col2, #col3 {
+    padding-bottom: 100px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
