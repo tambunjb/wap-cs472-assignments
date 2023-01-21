@@ -1,11 +1,6 @@
 window.onload = function(){
     "use strict";
 
-    document.getElementById("animation").onchange = () => {
-        /* global ANIMATIONS */
-        document.getElementById("text-area").value = ANIMATIONS[document.getElementById("animation").value];
-    };
-
     let animation_play;
     const separator = '=====\n';
     let speed = 250;
@@ -15,28 +10,16 @@ window.onload = function(){
     let font_size = 12;
     document.getElementById("text-area").style.fontSize = font_size + 'pt';
 
+    document.getElementById("animation").onchange = () => {
+        /* global ANIMATIONS */
+        document.getElementById("text-area").value = ANIMATIONS[document.getElementById("animation").value];
+    };
+
     document.getElementById("start").onclick = () => {
         document.getElementById("start").disabled = true;
         document.getElementById("stop").disabled = false;
         playAnimation();
     };
-
-    function playAnimation() {
-        if(!is_played) animation_frames = document.getElementById("text-area").value.split(separator);
-        is_played = true;
-        animation_play = setInterval(() => {
-            document.getElementById("text-area").value = animation_frames[counter++];
-            if(counter >= animation_frames.length) counter = 0;
-        }, speed);
-    }
-
-    function stopAnimation(reset = true) {
-        clearInterval(animation_play);
-        if(reset) {
-            counter = 0;
-            is_played = false;
-        }
-    }
 
     document.getElementById("stop").onclick = () => {
         stopAnimation();
@@ -57,4 +40,21 @@ window.onload = function(){
         font_size = document.getElementById("fontsize").value;
         document.getElementById("text-area").style.fontSize = font_size + 'pt';
     };
+
+    function playAnimation() {
+        if(!is_played) animation_frames = document.getElementById("text-area").value.split(separator);
+        is_played = true;
+        animation_play = setInterval(() => {
+            document.getElementById("text-area").value = animation_frames[counter++];
+            if(counter >= animation_frames.length) counter = 0;
+        }, speed);
+    }
+
+    function stopAnimation(reset = true) {
+        clearInterval(animation_play);
+        if(reset) {
+            counter = 0;
+            is_played = false;
+        }
+    }
 };
