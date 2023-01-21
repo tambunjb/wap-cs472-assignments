@@ -2,6 +2,7 @@ window.onload = function(){
     "use strict";
 
     document.getElementById("animation").onchange = () => {
+        /* global ANIMATIONS */
         document.getElementById("text-area").value = ANIMATIONS[document.getElementById("animation").value];
     };
 
@@ -50,10 +51,10 @@ window.onload = function(){
             stopAnimation(false);
             playAnimation();
         }
-    }
+    };
 
     document.getElementById("fontsize").onchange = () => {
         font_size = document.getElementById("fontsize").value;
         document.getElementById("text-area").style.fontSize = font_size + 'pt';
-    }
-}
+    };
+};
