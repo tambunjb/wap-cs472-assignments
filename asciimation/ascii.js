@@ -18,11 +18,13 @@ window.onload = function(){
     document.getElementById("start").onclick = () => {
         document.getElementById("start").disabled = true;
         document.getElementById("stop").disabled = false;
+        document.getElementById("animation").disabled = true;
         playAnimation();
     };
 
     document.getElementById("stop").onclick = () => {
         stopAnimation();
+        document.getElementById("animation").disabled = false;
         document.getElementById("stop").disabled = true;
         document.getElementById("start").disabled = false;
         document.getElementById("text-area").value = animation_frames.join(separator);
