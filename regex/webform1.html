@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Regex</title>
+        <link href="webform1.css" rel="stylesheet">
+    </head>
+    <body>
+        <form id="webform1">
+            <div id="field">
+                <label>Email address</label>
+                <input type="email" placeholder="Enter email" required />
+                <div id="hint">We'll never share your email with anyone else.</div>
+            </div>
+
+            <div id="field">
+                <label>Password</label>
+                <input required type="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)\w{10,}$" title="At least 10 characters in length and contain at least one number and one uppercase and lowercase letter" />
+            </div>
+
+            <div>
+                <input type="radio" id="checkMeOut" /> <label for="checkMeOut">Check me out</label>
+            </div>
+
+            <input type="submit" />
+        </form>
+    </body>
+</html>
