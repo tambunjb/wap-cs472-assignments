@@ -1,0 +1,15 @@
+#container {
+    display: grid;
+    grid-template-areas: 'form circle_area circle_area circle_area circle_area circle_area circle_area circle_area circle_area circle_area circle_area circle_area';
+}
+
+#form {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#circle_area {
+    grid-area: circle_area;
+}
